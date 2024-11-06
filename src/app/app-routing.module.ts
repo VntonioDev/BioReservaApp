@@ -11,6 +11,26 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'perfil-recole',
+    loadChildren: () => import('./perfil-recole/perfil-recole.module').then( m => m.PerfilRecolePageModule)
+  },
+  {
+    path: 'perfil-admin',
+    loadChildren: () => import('./perfil-admin/perfil-admin.module').then( m => m.PerfilAdminPageModule)
+  },
+  {
+    path: 'registrarusuario',
+    loadChildren: () => import('./registrarusuario/registrarusuario.module').then( m => m.RegistrarusuarioPageModule)
+  },
+  {
+    path: 'horario',
+    loadChildren: () => import('./horario/horario.module').then( m => m.HorarioPageModule)
+  },
+  {
+    path: 'inicio-admin',
+    loadChildren: () => import('./inicio-admin/inicio-admin.module').then( m => m.InicioAdminPageModule)
+  },
 ];
 
 @NgModule({

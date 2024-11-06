@@ -1,0 +1,35 @@
+config:
+  target: 'http://localhost:8100/perfil-recole'
+  phases:
+    - duration: 60
+      arrivalRate: 10
+      name: 'Simular Inicio de sesión y opciones del perfil'
+
+scenarios:
+  - name: 'Simular carga de perfil y acciones del usuario'
+    flow:
+      - get:
+          url: '/perfil'
+          headers:
+            Authorization: 'Bearer <token>'
+      - post:
+          url: '/cambiar-contraseña'
+          json:
+            old_password: 'contraseña-antigua'
+            new_password: 'contraseña-nueva'
+          headers:
+            Authorization: 'Bearer <token>'
+      - post:
+          url: '/cerrar-sesion'
+          headers:
+            Authorization: 'Bearer <token>'
+      - get:
+          url: '/notificaciones'
+          headers:
+            Authorization: 'Bearer <token>'
+      - post:
+          url: '/configurar-privacidad'
+          json:
+            privacy_settings: 'public'
+          headers:
+            Authorization: 'Bearer <token>'

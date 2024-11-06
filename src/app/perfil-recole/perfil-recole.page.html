@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+  <div class="profile-container">
+    <ion-avatar class="profile-avatar">
+      <img src="assets/avatar-placeholder.png" alt="Avatar">
+    </ion-avatar>
+    <h2>Juan Pérez</h2>
+    <p>Recolector</p>
+
+
+    <ion-list>
+      <ion-item button class="custom-button">
+        <ion-label>Cambiar Contraseña</ion-label>
+      </ion-item>
+
+
+      <ion-item button class="custom-button">
+        <ion-label>Notificaciones</ion-label>
+      </ion-item>
+
+
+      <ion-item button class="custom-button">
+        <ion-label>Privacidad & Seguridad</ion-label>
+      </ion-item>
+
+
+      <ion-item button class="custom-button">
+        <ion-label>Lenguaje</ion-label>
+      </ion-item>
+
+
+      <ion-item button class="custom-button">
+        <ion-label>Ver horario</ion-label>
+      </ion-item>
+
+
+      <ion-item button class="custom-button">
+        <ion-label>Guía</ion-label>
+      </ion-item>
+
+
+      <ion-item button class="custom-button">
+        <ion-label>Reportes</ion-label>
+      </ion-item>
+    </ion-list>
+
+
+    <ion-item button lines="none" class="logout custom-button">
+    <ion-label id="present-alert" color="danger">Cerrar sesión</ion-label> 
+<ion-alert
+  trigger="present-alert"
+  header="Cerrar sesion?"
+  [buttons]="alertButtons"
+  (didDismiss)="setResult($event)"
+></ion-alert>
+</ion-item>
+  </div>
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tab-bar>
+      <ion-tab-button tab="basureros">
+        <ion-icon name="trash-outline"></ion-icon>
+        <ion-label>Basureros a cargo</ion-label>
+      </ion-tab-button>
+
+
+      <ion-tab-button tab="perfil">
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-label>Perfil</ion-label>
+      </ion-tab-button>
+
+
+      <ion-tab-button tab="opciones">
+        <ion-icon name="settings-outline"></ion-icon>
+        <ion-label>Opciones</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-toolbar>
+</ion-footer>

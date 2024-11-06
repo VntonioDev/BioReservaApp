@@ -1,0 +1,38 @@
+ion-content {
+    --background: #ffffff; /* Color de fondo blanco */
+  }
+  
+  .horario-container {
+    text-align: center; /* Centrar el texto dentro del contenedor */
+    padding: 20px; /* Espaciado interno */
+  }
+  
+  .logo {
+    width: 140px; /* Tamaño de la imagen del logo */
+    margin-bottom: 20px; 
+  }
+  
+  .user-info {
+    margin-bottom: 30px; /* Espacio inferior para la información del usuario */
+  }
+  
+
+  
+  p {
+    font-size: 16px; /* Tamaño de la fuente del subtítulo */
+    color: #000000; /* Color del texto */
+  }
+  
+  ion-item {
+    --background: none; /* Sin fondo en los ítems */
+    margin-bottom: 20px; /* Espacio entre los campos del formulario */
+  }
+  
+  ion-note {
+    color: #000000; /* Color del texto de la nota */
+  }
+  
+  ion-footer {
+    --background: #ffffff; /* Color de fondo blanco para el footer */
+  }
+  

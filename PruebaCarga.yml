@@ -1,0 +1,15 @@
+config:
+  target: 'http://localhost:8100/home'  
+  phases:
+    - duration: 60   # Duración de la prueba en segundos
+      arrivalRate: 5  # Número de usuarios virtuales que llegan por segundo
+      name: "Simulando Inicio de Sesión con Usuario y Contraseña"
+
+scenarios:
+  - flow:
+      - post:
+          url: "/home"  
+          json:
+            username: "b"  # Nombre de usuario
+            password: "b"  # Contraseña
+      - think: 1  
